@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddScoped<IProductService,ProductService>();
 builder.Services.AddScoped<ICategoryService,CategoryService>();
-builder.Services.AddDbContext<ProductStoreContext>(options => options.UseSqlServer("name=ProductConnection:StudentConnection"));
+builder.Services.AddDbContext<ProductStoreContext>(options => options.UseSqlServer("name=ConnectionStrings:ProductConnection"));
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
