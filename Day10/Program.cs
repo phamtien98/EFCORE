@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IStudentService, StudentService>();
-builder.Services.AddDbContext<StudentContext>(options => options.UseSqlServer("name=ConnectionStrings:StudentConnection"));
+builder.Services.AddDbContext<StudentContext>(options => options.UseSqlServer("name=ConnectionStrings:ProductConnection"));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
